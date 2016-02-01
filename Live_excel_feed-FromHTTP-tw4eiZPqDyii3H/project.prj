@@ -1,0 +1,21 @@
+{
+    "LocalDependencies": [
+        "IguanaFeed.xlsm",
+        "analyze.vmd",
+        "getdefaultpage.lua",
+        "getexampledata.lua",
+        "getlogdata.lua",
+        "getspreadsheet.lua"
+    ],
+    "LuaDependencies": [
+        "excel.converter",
+        "web.basicauth"
+    ],
+    "OtherDependencies": [],
+    "timestamp": "1454352399",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}
