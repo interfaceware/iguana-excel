@@ -1,7 +1,7 @@
 <channel
    name="Excel Adapter"
    guid="E37E11F13BB9485DB0345966C271B905"
-   description="This web service channel shows how Iguana can be used to populate a live feed to an excel spreadsheet.&#xD;&#xA;&#xD;&#xA;It actually serves up the spread sheet to the user.  &#xD;&#xA;&#xD;&#xA;Once the spread sheet is obtained it maintains a live link to Iguana.&#xD;&#xA;&#xD;&#xA;It works with Excel 2011 on Mac and the Excel 2016 on Mac and on Windows.  It may work with earlier windows releases of Excel also."
+   description="This web service channel shows how Iguana can be used to populate a live feed to an excel spreadsheet.&#xD;&#xA;&#xD;&#xA;See: http://help.interfaceware.com/forums/topic/serving-live-data-into-excel&#xD;&#xA;&#xD;&#xA;Enter your Iguana username and password to access this channel.&#xD;&#xA;&#xD;&#xA;It actually serves up the excel spreadsheet to the user.  &#xD;&#xA;&#xD;&#xA;Once the spreadsheet is obtained it maintains a live link to Iguana.&#xD;&#xA;&#xD;&#xA;It works with Excel 2011 on Mac and the Excel 2016 on Mac and on Windows.  It may work with earlier windows releases of Excel also."
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="Live_excel_feed-FromHTTP-tw4eiZPqDyii3H"
-      commit_id="c95339f42e330b946263e393b2441a5d73da6e43"
-      commit_comment="d--D"
+      commit_id="4d2188dcb5d2a3b9d7c3bc1b4d299baa67543d0a"
+      commit_comment="Tweaked the realm."
       mapper_url_path="smalldata/"/>
    <message_filter
       filter_after_logging="false"

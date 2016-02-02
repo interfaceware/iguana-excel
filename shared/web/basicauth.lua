@@ -50,7 +50,7 @@ end
 function basicauth.requireAuthorization()
    net.http.respond{
       code=401,
-      headers={["WWW-Authenticate"]='Basic realm=Iguana Web Service'}, 
+      headers={["WWW-Authenticate"]='Basic realm=Enter your Iguana username and password'}, 
       body="Please Authenticate"}
 end
 
