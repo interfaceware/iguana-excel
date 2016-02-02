@@ -1,6 +1,6 @@
 -- Code used to handle serving up the excel spreadsheet on the fly.
 local function LoadFile(Path)
-   local F = io.open(Path, "r")
+   local F = io.open(Path, "rb")
    local Content = F:read("*a")
    F:close()
    return Content

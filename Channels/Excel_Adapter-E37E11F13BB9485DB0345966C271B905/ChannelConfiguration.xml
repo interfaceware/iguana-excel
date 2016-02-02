@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="Live_excel_feed-FromHTTP-tw4eiZPqDyii3H"
-      commit_id="4d2188dcb5d2a3b9d7c3bc1b4d299baa67543d0a"
-      commit_comment="Tweaked the realm."
+      commit_id="fd20364a552c6297da9166d76413bf0b8e2339c9"
+      commit_comment="Changed the loading mode to binary."
       mapper_url_path="smalldata/"/>
    <message_filter
       filter_after_logging="false"
