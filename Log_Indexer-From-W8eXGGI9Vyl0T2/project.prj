@@ -1,0 +1,17 @@
+{
+    "LocalDependencies": [
+        "LogInfo.vmd",
+        "analyze.vmd"
+    ],
+    "LuaDependencies": [
+        "log.analyse",
+        "store2"
+    ],
+    "OtherDependencies": [],
+    "timestamp": "1455903580",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

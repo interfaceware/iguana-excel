@@ -1,0 +1,25 @@
+<channel
+   name="Log Indexer"
+   guid="633966A6418D3133942428FEC05F3AA6"
+   description="Creates SQLite LogInfo database from the logs of an Iguana instance."
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="Log_Indexer-From-W8eXGGI9Vyl0T2"
+      commit_id="8250264d825287917da45a3b435c1a72893e445d"
+      commit_comment="Added comment."
+      poll_time="1000">
+   </from_mapper>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>

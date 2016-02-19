@@ -18,22 +18,66 @@ function excel.transpose(T)
    return Result
 end
 
+local function EscapeValue(V)
+   return V:gsub("@", "@A"):gsub(",", "@C"):gsub("\n", "@N")
+end
+
+
+-- Translate into a string for shipping off to Excel - with Escaping
+-- See http://www.lua.org/pil/11.6.html
+-- For concatenating many strings it's more efficient
+-- to insert many little strings into a table and concatenate with table.concat
 function excel.flatwire(T)
-   local R = ''
-   -- Translate into a string - with Escaping
+   os.ts.time()
+   local RT = {}
    for r=1, #T do
-      for c=1, #T[1] do
+      local Row = {}
+      for c=1, #T[1] do 
          if (type(T[r][c]) == 'string') then
-            R = R..T[r][c]:gsub("@", "@A"):gsub(",", "@C"):gsub("\n", "@N")..','
+            Row[#Row+1] = EscapeValue(T[r][c])
          elseif (type(T[r][c]) == 'userdata') then
-            R = R..T[r][c]:nodeValue():gsub("@", "@A"):gsub(",", "@C"):gsub("\n", "@N")..","               
+            Row[#Row+1] = EscapeValue(T[r][c]:nodeValue())
          else
-            R = R..T[r][c]..','
+            Row[#Row+1] = T[r][c]
          end
       end
-      R = R:sub(1, #R-1).."\n"
+      trace(Row)
+      RT[#RT+1] = table.concat(Row, ",")
    end
+   RT[#RT+1] = ''
+   R = table.concat(RT, "\n")
+   os.ts.time()
    return R
+end
+
+function excel.convertResultSet(T)
+   local Result = {}
+   Result[1] = {}
+   local HeaderRow = Result[1]
+   -- get the header fields
+   for i = 1, #T[1] do
+      HeaderRow[i] = T[1][i]:nodeName()
+   end
+   local ColumnCount = #T[1]
+   trace(ColumnCount)
+   for j = 1, #T do
+      local Row = {}
+      Result[j+1] = Row
+      for i=1, ColumnCount do
+         Row[i] = T[j][i]:S()
+      end
+   end
+   
+   return Result
+end
+
+function excel.lookupColumn(T, Name)
+   for i = 1, #T[1] do
+      if T[1][i] == Name then
+         return i
+      end
+   end
+   return -1
 end
 
 return excel
