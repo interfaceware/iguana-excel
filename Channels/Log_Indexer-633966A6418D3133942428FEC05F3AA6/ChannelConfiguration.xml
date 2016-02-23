@@ -1,7 +1,7 @@
 <channel
    name="Log Indexer"
    guid="633966A6418D3133942428FEC05F3AA6"
-   description="Creates SQLite LogInfo database from the logs of an Iguana instance."
+   description="Creates SQLite LogInfo database from the logs of an Iguana instance.&#xD;&#xA;&#xD;&#xA;Use it together with the log excel server which serves up the data collected by this channel."
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Log_Indexer-From-W8eXGGI9Vyl0T2"
-      commit_id="8250264d825287917da45a3b435c1a72893e445d"
-      commit_comment="Added comment."
+      commit_id="e033151903c227d82876d021fcfb97438b514931"
+      commit_comment="Import Translators: Excel server"
       poll_time="1000">
    </from_mapper>
    <message_filter

@@ -1,7 +1,7 @@
 <channel
    name="Log Excel Server"
    guid="62EDF28E8827682F242F9350FA2C7E2A"
-   description="This the second version of the excel server.&#xD;&#xA;&#xD;&#xA;This one makes use of SQLlite database populated by the log index server channel.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/forums/topic/serving-live-data-into-excel"
+   description="This channel will serve up an excel spreadsheet which reports on a SQLlite database populated by the log index server channel.&#xD;&#xA;&#xD;&#xA;You should get that channel also and run it.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/forums/topic/serving-live-data-into-excel"
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="Log_Excel_Server-FromHTTP-cVn4Fv9d218ALW"
-      commit_id="195a3033b9a714ac41df9805233e3bcc2b278e2f"
-      commit_comment="Corrected sheet names."
+      commit_id="e033151903c227d82876d021fcfb97438b514931"
+      commit_comment="Import Translators: Excel server"
       mapper_url_path="loginfo/"/>
    <message_filter
       filter_after_logging="false"
