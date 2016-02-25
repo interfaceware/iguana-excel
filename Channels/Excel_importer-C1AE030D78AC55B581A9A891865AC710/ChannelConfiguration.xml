@@ -1,0 +1,25 @@
+<channel
+   name="Excel importer"
+   guid="C1AE030D78AC55B581A9A891865AC710"
+   description="This channel will receive data from an excel spreadsheet that it can serve up."
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_http
+      type="mapper"
+      guid="Excel_importer-FromHTTP-XwovywsWYngoF6"
+      commit_id="c98936940ce5c3eb64619abf450bf9e79dd743ce"
+      commit_comment="Put in --data-binary to preserve newlines."
+      mapper_url_path="export/"/>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>

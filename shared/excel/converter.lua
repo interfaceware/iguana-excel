@@ -50,6 +50,28 @@ function excel.flatwire(T)
    return R
 end
 
+function excel.parse(Data)
+   local Rows = Data:split("\n")
+   for i=1, #Rows do
+      Rows[i] = Rows[i]:split(",")
+      for j=1, #Rows[i] do
+         Rows[i][j] = Rows[i][j]:gsub("@N", "\n"):gsub("@C", ","):gsub("@A", "@") 
+      end
+   end
+   Rows[#Rows] = nil
+   return Rows
+end
+
+function excel.package(T, RowIndex)
+   local R = {}
+   local Headers = T[1]
+   local Row = T[RowIndex]
+   for i=1, #Headers do
+      R[Headers[i]] = Row[i]
+   end
+   return R
+end
+
 function excel.convertResultSet(T)
    local Result = {}
    Result[1] = {}
