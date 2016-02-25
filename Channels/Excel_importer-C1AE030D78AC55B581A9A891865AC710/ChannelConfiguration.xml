@@ -1,7 +1,7 @@
 <channel
    name="Excel importer"
    guid="C1AE030D78AC55B581A9A891865AC710"
-   description="This channel will receive data from an excel spreadsheet that it can serve up."
+   description="This channel will serve up an Excel spread sheet which has a button that can be used send the contents of a Excel table back into this Iguana web service.&#xD;&#xA;&#xD;&#xA;The Iguana webservice takes that data and turns each row into a JSON object which is then pushed into the queue.&#xD;&#xA;&#xD;&#xA;This is useful since it gives the ability to upload tabular data on mass into Iguana - it forms a link between Iguana which is power engine for processing data and Excel which is very accessible to  non technical users.&#xD;&#xA;&#xD;&#xA;See: http://help.interfaceware.com/forums/topic/serving-live-data-into-excel &#xD;&#xA;&#xD;&#xA;Use this channel with the From Excel Importer."
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="Excel_importer-FromHTTP-XwovywsWYngoF6"
-      commit_id="c98936940ce5c3eb64619abf450bf9e79dd743ce"
-      commit_comment="Put in --data-binary to preserve newlines."
+      commit_id="8be7d67f652f7056652ba52b67ccf0225cbde7ea"
+      commit_comment="Import Translators: Excel"
       mapper_url_path="export/"/>
    <message_filter
       filter_after_logging="false"

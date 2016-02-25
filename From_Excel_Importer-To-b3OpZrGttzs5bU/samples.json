@@ -2,23 +2,23 @@
     "Samples": [
         {
             "Message": "{\n   \"Id\": \"2332\",\n   \"Manager\": \"Reagan\",\n   \"Name\": \"Caledonia Enterprises\"\n}",
-            "Name": ""
+            "Name": "Message 1"
         },
         {
             "Message": "{\n   \"Id\": \"23232\",\n   \"Manager\": \"Paul\",\n   \"Name\": \"Medlink Inc.\"\n}",
-            "Name": ""
+            "Name": "Message 2"
         },
         {
             "Message": "{\n   \"Id\": \"23\",\n   \"Manager\": \"Art\",\n   \"Name\": \"Microsoft Services\"\n}",
-            "Name": ""
+            "Name": "Message 3"
         },
         {
             "Message": "{\n   \"Id\": \"233\",\n   \"Manager\": \"Paul\",\n   \"Name\": \"Calypso Inc\"\n}",
-            "Name": ""
+            "Name": "Message 4"
         },
         {
             "Message": "{\n   \"Id\": \"2332\",\n   \"Manager\": \"Reagan\",\n   \"Name\": \"Caledonia Enterprises\"\n}",
-            "Name": ""
+            "Name": "Message 5"
         }
     ]
 }
