@@ -7,12 +7,12 @@
    use_message_filter="false">
    <to_mapper
       guid="From_Excel_Importer-To-b3OpZrGttzs5bU"
-      commit_id="8be7d67f652f7056652ba52b67ccf0225cbde7ea"
-      commit_comment="Import Translators: Excel">
+      commit_id="0ad79086f062688e355ddac89199c40ad9407aeb"
+      commit_comment="Import Translators: Getting log analyzer stuff imported.">
       <dequeue_list>
          <dequeue
-            source_guid="00000000000000000000000000000000"
-            dequeue_guid="82E3F0E3503644133DAE74CD623D6413"/>
+            source_name="Excel importer"
+            dequeue_guid="C1D30C1AAECEC0F051DAF0E6CF2DAD0B"/>
       </dequeue_list>
    </to_mapper>
    <from_channel/>

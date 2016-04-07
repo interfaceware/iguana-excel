@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="Excel_importer-FromHTTP-XwovywsWYngoF6"
-      commit_id="8be7d67f652f7056652ba52b67ccf0225cbde7ea"
-      commit_comment="Import Translators: Excel"
+      commit_id="0ad79086f062688e355ddac89199c40ad9407aeb"
+      commit_comment="Import Translators: Getting log analyzer stuff imported."
       mapper_url_path="export/"/>
    <message_filter
       filter_after_logging="false"
