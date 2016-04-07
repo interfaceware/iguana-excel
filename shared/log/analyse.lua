@@ -49,8 +49,14 @@ function log.queryLogs(T)
          after    =  PollTime:gsub("-", "/"),  -- the query syntax for times is a little different
          reverse = 'false',  -- with newest entries at the top
       },live=true} 
+   local Success, R = pcall(xml.parse, {data=X})
+   if not Success then
+      -- We got unparseable XML.  This shouldn't happen but...
+      iguana.logWarning("We have some unparseable log XML")
+      iguana.logWarning(X)
+      error(R)
+   end
    
-   local R = xml.parse{data=X}
    if R.export.success:S() == 'false' then
       error(R.export.error.description:S(), 2)
    end

@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Log_Indexer-From-W8eXGGI9Vyl0T2"
-      commit_id="e033151903c227d82876d021fcfb97438b514931"
-      commit_comment="Import Translators: Excel server"
+      commit_id="0b457aebd1d7fe1e7c510845ed89cda16c930cf3"
+      commit_comment="Put in better logging of unparseable XML."
       poll_time="1000">
    </from_mapper>
    <message_filter
