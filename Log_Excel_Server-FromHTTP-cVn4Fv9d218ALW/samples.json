@@ -1,0 +1,20 @@
+{
+    "Samples": [
+        {
+            "Message": "GET /loginfo/feed?channel=all HTTP/1.1\r\nHost: localhost:6544\r\nAuthorization: Basic YWRtaW46cGFzc3dvcmQ=\r\nUser-Agent: curl/7.43.0\r\nAccept: */*\r\n\r\n",
+            "Name": "Message 1"
+        },
+        {
+            "Message": "GET /loginfo/sheet.xlsm HTTP/1.1\r\nHost: eliotmac.local:6544\r\nConnection: keep-alive\r\nAuthorization: Basic YWRtaW46cGFzc3dvcmQ=\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36\r\nReferer: http://eliotmac.local:6544/loginfo/\r\nAccept-Encoding: gzip, deflate, sdch\r\nAccept-Language: en-US,en;q=0.8\r\nCookie: Iguana-SessionID-A33C75AA38156031100C6D26EF4A26BB-6543=2EE65BF1BCB0FF784E1B19640FFC21F1; version_notification_close_date=; Iguana-ChannelFilterString-A33C75AA38156031100C6D26EF4A26BB-admin=log\r\n\r\n",
+            "Name": "Message 2"
+        },
+        {
+            "Message": "POST /export/upload HTTP/1.1\r\nHost: localhost:6544\r\nAuthorization: Basic YWRtaW46cGFzc3dvcmQ=\r\nUser-Agent: curl/7.43.0\r\nAccept: */*\r\nContent-Length: 299\r\nContent-Type: application/x-www-form-urlencoded\r\n\r\nId,Name,Manager233,Calypso Inc,Paul232,Mercy,Jeff322,Java Joes,Fred2222,Smithsonian,Mary323,Andersons,Paul32,Beehive Inc.,Fred23,Juju Corp,Paul2323,Life Sciences,Mary23,Delphi,Reagan23,Microsoft Services,Art23,PwC,Harold23232,Medlink Inc.,Paul32323,Cow Sciences,Jeff2332,Caledonia Enterprises,Reagan",
+            "Name": ""
+        },
+        {
+            "Message": "POST /export/upload HTTP/1.1\r\nHost: localhost:6544\r\nAuthorization: Basic YWRtaW46cGFzc3dvcmQ=\r\nUser-Agent: curl/7.43.0\r\nAccept: */*\r\nContent-Length: 314\r\nContent-Type: application/x-www-form-urlencoded\r\n\r\nId,Name,Manager\n233,Calypso Inc,Paul\n232,Mercy,Jeff\n322,Java Joes,Fred\n2222,Smithsonian,Mary\n323,Andersons,Paul\n32,Beehive Inc.,Fred\n23,Juju Corp,Paul\n2323,Life Sciences,Mary\n23,Delphi,Reagan\n23,Microsoft Services,Art\n23,PwC,Harold\n23232,Medlink Inc.,Paul\n32323,Cow Sciences,Jeff\n2332,Caledonia Enterprises,Reagan\n",
+            "Name": ""
+        }
+    ]
+}
