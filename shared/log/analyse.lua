@@ -39,7 +39,12 @@ function log.queryLogs(T)
    local User = T.user
    local Password = T.password
    local PollTime = T.polltime
-   local URL = 'http://localhost:'
+   local WebInfo = iguana.webInfo()
+   local URL = 'http'
+   if WebInfo.web_config.use_https then
+      URL = URL.."s"
+   end
+   URL = URL..'://localhost:'
       ..iguana.webInfo().web_config.port..'/api_query'
    local X = net.http.get{url=URL,
       parameters={
