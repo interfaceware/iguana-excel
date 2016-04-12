@@ -13,7 +13,16 @@ end
 -- relative to the URL that the client came in by.
 local function AlterHost(X, Host)
    local Url = X.t[1]:S()
-   Url = Url:gsub("http://[^:]*:[0-9]*/", 'http://'..Host..'/')
+   local WebInfo = iguana.webInfo()
+   local BaseUrl
+   if WebInfo.https_channel_server.use_https then
+      BaseUrl = "https://"
+   else
+      BaseUrl = "http://"
+   end
+   BaseUrl = BaseUrl..Host..'/'
+   trace(BaseUrl)
+   Url = Url:gsub("http://[^:]*:[0-9]*/", BaseUrl)
    X.t[1] = Url
 end
 
