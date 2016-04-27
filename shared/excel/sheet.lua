@@ -56,7 +56,7 @@ function sheet.serve(T)
    for i=1, X.sst:childCount("si") do 
       local SharedString = X.sst:child("si", i)
       -- Change URLs to address of this Iguana
-      if SharedString.t:nodeText():find("http://") or SharedString.t:nodeText():find("https://") ~= nil then
+      if SharedString.t and (SharedString.t:nodeText():find("^http://") or SharedString.t:nodeText():find("^https://") ~= nil) then
          AlterHost(SharedString, Host)
       end
       -- We change the spread sheet user name on the fly 
