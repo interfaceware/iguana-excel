@@ -12,7 +12,7 @@ end
 -- This finds the URLs in the spreadsheet and converts them
 -- relative to the URL that the client came in by.
 local function AlterHost(X, Host)
-   local Url = X.t[1]:S()
+   local Url = X.t:nodeText()
    local WebInfo = iguana.webInfo()
    local BaseUrl
    if WebInfo.https_channel_server.use_https then
@@ -22,7 +22,7 @@ local function AlterHost(X, Host)
    end
    BaseUrl = BaseUrl..Host..'/'
    trace(BaseUrl)
-   Url = Url:gsub("http://[^:]*:[0-9]*/", BaseUrl)
+   Url = Url:gsub("https?://[^:]*:[0-9]*/", BaseUrl)
    X.t[1] = Url
 end
 
@@ -56,11 +56,11 @@ function sheet.serve(T)
    for i=1, X.sst:childCount("si") do 
       local SharedString = X.sst:child("si", i)
       -- Change URLs to address of this Iguana
-      if SharedString.t[1]:S():find("http://") ~= nil then
+      if SharedString.t:nodeText():find("http://") or SharedString.t:nodeText():find("https://") ~= nil then
          AlterHost(SharedString, Host)
       end
       -- We change the spread sheet user name on the fly 
-      if SharedString.t[1]:S() == 'admin' then
+      if SharedString:nodeText() == 'admin' then
          SharedString.t[1] = User
       end
    end

@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="Log_Excel_Server-FromHTTP-cVn4Fv9d218ALW"
-      commit_id="dd91fd3bf932ad68b886c409d984aa976b7d723e"
-      commit_comment="Import Translators: sfs"
+      commit_id="537b6b731200e04bd06e493c7ec420ae74b16f60"
+      commit_comment="More tweaks to code to the changes URLs in the spreadsheet to deal with http vs. https variants."
       mapper_url_path="loginfo/"/>
    <message_filter
       filter_after_logging="false"

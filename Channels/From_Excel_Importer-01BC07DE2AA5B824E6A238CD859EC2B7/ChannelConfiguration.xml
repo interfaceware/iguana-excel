@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="From_Excel_Importer-To-b3OpZrGttzs5bU"
-      commit_id="0ad79086f062688e355ddac89199c40ad9407aeb"
-      commit_comment="Import Translators: Getting log analyzer stuff imported.">
+      commit_id="64663365b6ef52fb68a01f650932f35f4ad77751"
+      commit_comment="Import Translators: Getting latest excel importer.">
       <dequeue_list>
          <dequeue
             source_name="Excel importer"
