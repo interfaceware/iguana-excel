@@ -1,14 +1,14 @@
 <channel
    name="From Excel Importer"
    guid="01BC07DE2AA5B824E6A238CD859EC2B7"
-   description="This channel takes JSON objects that have been imported by the Excel Importer and processes them.&#xD;&#xA;&#xD;&#xA;This is more of starting project - not much code here to see.&#xD;&#xA;&#xD;&#xA;To make it work you will probably need to configure the Source channel to feed from the Excel Importer channel."
+   description="This channel will serve up an Excel spread sheet which has a button that can be used send the contents of a Excel table back into this Iguana web service.&#xD;&#xA;&#xD;&#xA;The Iguana webservice takes that data and turns each row into a JSON object which is then pushed into the queue.&#xD;&#xA;&#xD;&#xA;This is useful since it gives the ability to upload tabular data on mass into Iguana - it forms a link between Iguana which is power engine for processing data and Excel which is very accessible to non technical users.&#xD;&#xA;&#xD;&#xA;See: http://help.interfaceware.com/forums/topic/serving-live-data-into-excel &#xD;&#xA;&#xD;&#xA;Use this channel with the From Excel Importer."
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
    <to_mapper
       guid="From_Excel_Importer-To-b3OpZrGttzs5bU"
-      commit_id="64663365b6ef52fb68a01f650932f35f4ad77751"
-      commit_comment="Import Translators: Getting latest excel importer.">
+      commit_id="97408deeefeced60ace6717d0b846de8f1a075ec"
+      commit_comment="First commit">
       <dequeue_list>
          <dequeue
             source_name="Excel importer"
