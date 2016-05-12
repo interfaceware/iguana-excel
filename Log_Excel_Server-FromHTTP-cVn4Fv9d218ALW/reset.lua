@@ -13,7 +13,9 @@ Please <a href=".">Return to the main page</a>.
 </html>
 ]]
 
-function Reset()
+local function Reset()
    log.reset()
    net.http.respond{body=Body}
 end
+
+return Reset

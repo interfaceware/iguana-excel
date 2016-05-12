@@ -1,7 +1,7 @@
 local log = require 'log.analyse'
 local excel = require 'excel.converter'
 
-function GetLogInfo(R,A)
+local function GetLogInfo(R,A)
    local C = log.connection()
    local Start = os.ts.time()
    local Sql = "SELECT * FROM LogInfo"
@@ -26,3 +26,5 @@ function GetLogInfo(R,A)
    iguana.logInfo("Query took "..TimeTaken.." seconds for "..#Results.." rows")
    net.http.respond{body=Body}
 end
+
+return GetLogInfo

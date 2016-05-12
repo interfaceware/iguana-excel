@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="From_Excel_Importer-To-b3OpZrGttzs5bU"
-      commit_id="97408deeefeced60ace6717d0b846de8f1a075ec"
-      commit_comment="First commit">
+      commit_id="d286e3fde7a81c3a1c38c62ad61e46f0f519179d"
+      commit_comment="Import Translators: Excel">
       <dequeue_list>
          <dequeue
             source_name="Excel importer"

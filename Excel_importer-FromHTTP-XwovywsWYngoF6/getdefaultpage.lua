@@ -5,16 +5,72 @@ local Body=[[
 <head>
 <style>
 body {
-    font-family: Arial;
-    padding: .5em;
-    background-color: #E7F9E7;
+   display: table;
+   height: 100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0) linear-gradient(135deg, #4caf50 35%, #8bc34a 100%) repeat scroll 0 0;
+   font-family: "Open Sans",sans-serif;
+   color: #414042;
+   padding: 50px 0px;
 }
+   
+a {
+   color: #006DB6;
+}
+   
+div.container {
+   display: table-cell;
+   vertical-align: middle;
+}
+   
+div.contents {
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
+   background: #FFFFFF;
+   border-radius: 4px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+   padding: 40px;
+}
+   
+h1 {
+   font-weight: 300;
+   color: #357D57;
+   margin: 0px 0px 10px 0px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #98C21F;
+}
+   
+p {
+   margin: 25px 0px;
+   line-height: 1.5em;
+   }
+   
+div.insetbox {
+   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.5);
+   background: #f5f5f5;
+   border-radius: 3px;
+   padding: 10px 20px;
+   overflow: auto;
+}
+
+ol li {
+   padding: 0.25em 0px;
+}
+   
 </style>
-<head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+</head>
 <body>
+
+<div class="container">
+<div class="contents">
+   
 <h1>Excel Uploading Tool</h1>
 <p>You are logged in as <b>NAME</b> to a Microsoft Excel loading feed powered by Iguana.</p>
 <p>This is a tool which allows you to edit datasets in Excel tables and upload that data for processing by Iguana.</p>
+
+<div class="insetbox">   
 <p>Let's get started:</p>
 <ol>
 <li><a href='sheet.xlsm'>Download a spreadsheet</a></li>
@@ -25,34 +81,22 @@ body {
 <li>This will have uploaded the data in the "Accounts" tab of the excel spread sheet.</li>
 <li>The channel will receive the data, break each row into a friendly JSON object and shunt it downstream for transactional processing by another translator channel in Iguana.</li>
 </ol>
+</div>
 <p>
-Why do this?
+Having the ability to prepare a dataset in Excel which can then be fed into Iguana and processed has many applications.  It could
+allow admin staff to work with an Iguana expert to do bulk updates against a web API of an application.  It could be used to load
+mappings from a specification spreadsheet into Iguana where it can be turned into Lua mappings and so on.
 </p>
-<p>
-Often organizations are faced with the need to do bulk updates to data that exists in applications or multiple applications.
-</p>
-<p>
-Many applications don't make this easy but if the application has say a web API that Iguana can use to talk to then it's become
-easy to use Iguana to do these kinds of updates.  Iguana is a wonderfully convenient environment to script out interactions with
-web services.
-</p>
-<p>
-Excel on the other hand is a very accessible tool in which to edit and manipulate tabular data. So it becames
-easy to help non technical staff achieve these mass updates by serving the data up in excel and then feeding
-back the edits into Iguana.  
-</p>
-<p>
-Best of both worlds!  Get more done and create more value.  Enjoy!
-</p>
+</div><!-- End .container -->
+</div><!-- End .contents -->
+   
 </body>
 </html>
 ]]
 
-function GetDefaultPage(R, Auth)
+local function GetDefaultPage(R, Auth)
    local Result = Body:gsub("NAME", Auth.username)
    net.http.respond{body=Result}
 end
 
-function GetUserDefaultPage(R, Auth)
-   net.http.respond{body="You need to have an administrator privilleges to use this web service."}   
-end
+return GetDefaultPage

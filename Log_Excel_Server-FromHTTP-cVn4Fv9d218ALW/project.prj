@@ -4,6 +4,8 @@
         "getdefaultpage.lua",
         "getloginfo.lua",
         "getspreadsheet.lua",
+        "getuserdefaultpage.lua",
+        "report.lua",
         "reset.lua"
     ],
     "LuaDependencies": [
@@ -19,7 +21,7 @@
     "OtherDependencies": [
         "excel/core.xlsm"
     ],
-    "timestamp": "1461782072",
+    "timestamp": "1463084958",
     "version_info": {
         "build": 0,
         "major": 6,
