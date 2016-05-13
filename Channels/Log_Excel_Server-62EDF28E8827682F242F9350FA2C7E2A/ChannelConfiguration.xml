@@ -1,7 +1,7 @@
 <channel
    name="Log Excel Server"
    guid="62EDF28E8827682F242F9350FA2C7E2A"
-   description="This channel will serve up an excel spreadsheet which reports on a SQLlite database populated by the Log Indexer channel.&#xD;&#xA;&#xD;&#xA;You should get that channel also and run it.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/forums/topic/serving-live-data-into-excel"
+   description="This channel will serve up an excel spreadsheet which reports on a SQLlite database populated by the Log Indexer channel. It is a simple example of allowing Iguana to serve up data to an Excel spreadsheet.&#xD;&#xA;&#xD;&#xA;You should also get that channel and run it.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/excel-adapter"
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="Log_Excel_Server-FromHTTP-cVn4Fv9d218ALW"
-      commit_id="2ceea31f8665779b106fc2d31a2ffd15ed0510fa"
-      commit_comment="Got rid of extra dot."
+      commit_id="80a64029d9876ee592d383a4c12e31985075d43f"
+      commit_comment="Put in documentation links."
       mapper_url_path="loginfo/"/>
    <message_filter
       filter_after_logging="false"
