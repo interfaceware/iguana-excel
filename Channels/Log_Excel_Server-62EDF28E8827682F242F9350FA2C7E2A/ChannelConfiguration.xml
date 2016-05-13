@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="Log_Excel_Server-FromHTTP-cVn4Fv9d218ALW"
-      commit_id="1d1a9603b76de6fb11eff2ec34171e1ab705c9b2"
-      commit_comment="New look and feel from Zachary."
+      commit_id="2ceea31f8665779b106fc2d31a2ffd15ed0510fa"
+      commit_comment="Got rid of extra dot."
       mapper_url_path="loginfo/"/>
    <message_filter
       filter_after_logging="false"

@@ -81,7 +81,7 @@ ol li {
 </div>
 <p>
 The spreadsheet has Visual Basic for Applications (VBA) macro code which does the HTTP call to fetch
-and parse data from a SQLite database we built off the log data..
+and parse data from a SQLite database we built off the log data.
 </p>
 <p>
 To clear the database so it can be rebuilt and populated click <a href="reset">reset</a>.
