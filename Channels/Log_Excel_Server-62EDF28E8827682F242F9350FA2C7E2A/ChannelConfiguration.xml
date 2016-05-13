@@ -1,7 +1,7 @@
 <channel
    name="Log Excel Server"
    guid="62EDF28E8827682F242F9350FA2C7E2A"
-   description="This channel will serve up an excel spreadsheet which reports on a SQLlite database populated by the Log Indexer channel. It is a simple example of allowing Iguana to serve up data to an Excel spreadsheet.&#xD;&#xA;&#xD;&#xA;You should also get that channel and run it.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/excel-adapter"
+   description="It is a simple example of allowing Iguana to serve up data to an Excel spreadsheet.&#xD;&#xA;&#xD;&#xA;Install this with the Log Indexer channel to see how it can be used to export log data to Excel.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/excel-adapter"
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
