@@ -1,5 +1,6 @@
 -- This represents the boiler plate for a channel representing an Iguana webservice channel
 -- serving data up to Excel
+-- See http://help.interfaceware.com/v6/excel-adapter
 
 -- We get the general framework
 local server = require 'excel.server'

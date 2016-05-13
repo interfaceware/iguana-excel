@@ -1,3 +1,6 @@
+-- http://help.interfaceware.com/v6/excel-adapter
+-- Helpers for excel adapter
+
 local excel = {}
 
 function excel.transpose(T)

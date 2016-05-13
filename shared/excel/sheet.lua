@@ -1,6 +1,8 @@
+-- http://help.interfaceware.com/v6/excel-adapter
+-- Code used to handle serving up the excel spreadsheet on the fly.
+
 local sheet = {}
 
--- Code used to handle serving up the excel spreadsheet on the fly.
 
 local function LoadFile(Path)
    local F = io.open(Path, "rb")

@@ -1,3 +1,6 @@
+-- http://help.interfaceware.com/v6/excel-adapter
+-- Basic boiler code for excel adapter server
+
 local basicauth = require 'web.basicauth'
 
 local server = {}
