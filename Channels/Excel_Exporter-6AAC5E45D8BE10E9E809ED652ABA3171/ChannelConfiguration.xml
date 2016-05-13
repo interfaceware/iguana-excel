@@ -1,7 +1,7 @@
 <channel
    name="Excel Exporter"
    guid="6AAC5E45D8BE10E9E809ED652ABA3171"
-   description="This channel will serve up an Excel spread sheet which has a button that can be used to export the contents of an Excel table back into this Iguana web service.&#xD;&#xA;&#xD;&#xA;The Iguana webservice takes that data and turns each row into a JSON object which is then pushed into the queue.&#xD;&#xA;&#xD;&#xA;This is useful since it gives the ability to upload tabular data on mass into Iguana - it forms a link between Iguana which is power engine for processing data and Excel which is very accessible to  non technical users.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/excel-exporter&#xD;&#xA;&#xD;&#xA;Use this channel with the From Excel Importer."
+   description="This channel will serve up an Excel spread sheet which has a button that can be used to export the data of any Excel table in this sheet back into this Iguana web service.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/excel-exporter&#xD;&#xA;&#xD;&#xA;Use this channel with the From Excel Importer."
    start_automatically="true"
    logging_level="1"
    use_message_filter="false">
