@@ -1,0 +1,25 @@
+<channel
+   name="Log 1: Export Logs to DB"
+   guid="05DFF408F9829CBACA1898C261C03EF0"
+   description="Creates SQLite LogInfo database from the logs of an Iguana instance.&#xD;&#xA;&#xD;&#xA;Use it together with &quot;Log 2: Import DB Logs to Excel&quot; which imports the log data from the SQLite DB that this channel creates.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/excel-import"
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="Log_1_Export_Logs_to_DB-From-BKnPgSNkfluON9"
+      commit_id="07262b30fd2d1d7c1210f7f7a5cbc4082502232c"
+      commit_comment="Import Translators: Julian import."
+      poll_time="1000">
+   </from_mapper>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>

@@ -1,0 +1,29 @@
+{
+    "LocalDependencies": [
+        "IguanaFeed.xlsm",
+        "getdefaultpage.lua",
+        "getloginfo.lua",
+        "getspreadsheet.lua",
+        "getuserdefaultpage.lua",
+        "reset.lua"
+    ],
+    "LuaDependencies": [
+        "excel.converter",
+        "excel.server",
+        "excel.sheet",
+        "iguana.action",
+        "iguana.user",
+        "log.analyse",
+        "store2",
+        "web.basicauth"
+    ],
+    "OtherDependencies": [
+        "excel/core.xlsm"
+    ],
+    "timestamp": "1464376671",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

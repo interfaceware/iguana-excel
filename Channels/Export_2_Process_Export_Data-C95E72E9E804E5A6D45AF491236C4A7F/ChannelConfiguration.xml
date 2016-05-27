@@ -1,0 +1,19 @@
+<channel
+   name="Export 2: Process Export Data"
+   guid="C95E72E9E804E5A6D45AF491236C4A7F"
+   description="This channel will serve up an Excel spread sheet which has a button that can be used send the data in an Excel table into Iguana.&#xD;&#xA;&#xD;&#xA;This web service takes that data and turns each row into a JSON object which is then pushed into the queue.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/excel-export&#xD;&#xA;&#xD;&#xA;This channel works with the &quot;Export 1: Export From Excel &quot; channel"
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="Export_2_Process_Export_Data-To-dSKCjCPik0uDBp"
+      commit_id="07262b30fd2d1d7c1210f7f7a5cbc4082502232c"
+      commit_comment="Import Translators: Julian import.">
+      <dequeue_list>
+         <dequeue
+            source_name="Export 1: Export From Excel"
+            dequeue_guid="EA90C5E0E9D1C87F2B630E317CA738F9"/>
+      </dequeue_list>
+   </to_mapper>
+   <from_channel/>
+</channel>

@@ -1,0 +1,25 @@
+<channel
+   name="Export 1: Export From Excel"
+   guid="C83F3A34A69F7F3E311ECDEF20F60277"
+   description="This channel will serve up an Excel spread sheet which has a button that can be used to export the data of any Excel table in this sheet back into this Iguana web service.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/excel-export&#xD;&#xA;&#xD;&#xA;This channel works with the &quot;Export 2: Process Export Data&quot; channel"
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_http
+      type="mapper"
+      guid="Export_1_Export_From_Excel-FromHTTP-pD8t35NSTGovtS"
+      commit_id="07262b30fd2d1d7c1210f7f7a5cbc4082502232c"
+      commit_comment="Import Translators: Julian import."
+      mapper_url_path="export/"/>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>

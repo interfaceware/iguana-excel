@@ -1,7 +1,7 @@
--- http://help.interfaceware.com/v6/excel-adapter
 -- Code used to handle serving up the excel spreadsheet on the fly.
 
-local sheet = {}
+-- See the Iguana Excel category documentation:
+-- http://help.interfaceware.com/category/building-interfaces/repositories/builtin-iguana-excel
 
 
 local function LoadFile(Path)
@@ -40,10 +40,10 @@ local function LatestVbaCode()
 end
 
 -- Excel spreadsheets in xlsm format are actually zip archive files which amongst other
--- things contain a lot of XML documents.  We leverage Iguana's ability to unzip
--- a zip archive on the fly into a Lua table.  That allows us to modify the spreadsheet
+-- things contain a lot of XML documents. We leverage Iguana's ability to unzip
+-- a zip archive on the fly into a Lua table. That allows us to modify the spreadsheet
 -- on the fly, put our changes back and zip the file up again to serve to the user.
-function sheet.serve(T)
+local function serve(T)
    local User = T.user
    local Sheet = T.sheet
    local Host = T.host
@@ -73,6 +73,49 @@ function sheet.serve(T)
    net.http.respond{body=SData, entity_type='application/xls'}
 end
 
--- TODO help for sheet.serve(T)
+--   sheet.serve{user=Auth.username, sheet='IguanaFeed.xlsm', host=R.headers.Host}
 
-return sheet
+local Help = {
+   Title="sheet.serve",
+   Usage="sheet.serve{user=&lt;value&gt;, sheet=&lt;value&gt;, host=&lt;value&gt;}",
+   ParameterTable=true,
+   Parameters={
+      {user={Desc="Specify the User name <u>string</u>."}},
+      {sheet={Desc="Specify the (base) spreadsheet to serve <u>string</u>."}},
+      {host={Desc="Specify the Iguana Host name <u>string</u>."}},
+   },
+
+   Returns={},
+   Examples={[[-- Hard-coded "user" and "host" to demonstrate param values
+sheet.serve{user='admin', sheet='IguanaFeed.xlsm', host='localhost:6545'}]],
+[[-- Example showing more typical usage with soft-coded params
+sheet.serve{user=Auth.username, sheet='IguanaFeed.xlsm', host=Request.headers.Host}]]},
+   Desc=[[Serve an Excel spreadsheet, based on the "sheet" parameter. The "base spreadsheet" is stored 
+in the directory for the channel. The "user" and "host" parameters are used to update settings data 
+in the first tab of the spreadsheet (GetData). The "host" parameter is used to update host name in the 
+URL table field (to reference the correct Iguana instance). The "user" parameter is used to update the
+User name field.<br><br><b>Note:</b> The function also loads shared VBA code into the served 
+spreadsheet from the core.xlsm.]],
+   SeeAlso={
+      {
+         Title="Export from Excel to Iguana",
+         Link="http://help.interfaceware.com/v6/excel-export"
+      },
+      {
+         Title="Source code for the excel.converter.lua module on github",
+         Link="https://github.com/interfaceware/iguana-excel/blob/master/shared/excel/converter.lua"
+      },
+      {
+         Title="Source code for the excel.server.lua module on github",
+         Link="https://github.com/interfaceware/iguana-excel/blob/master/shared/excel/server.lua"
+      },
+      {
+         Title="Source code for the excel.sheet.lua module on github",
+         Link="https://github.com/interfaceware/iguana-excel/blob/master/shared/excel/sheet.lua"
+      },
+   },
+}
+
+help.set{input_function=serve, help_data=Help}
+
+return serve

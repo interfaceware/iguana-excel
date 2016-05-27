@@ -1,0 +1,25 @@
+<channel
+   name="Log 2: Import DB Logs to Excel"
+   guid="396DC0BC4A15E8463F205FDA24E9FF74"
+   description="It is a simple example of allowing Iguana to serve up data from a SQLite DB to an Excel spreadsheet.&#xD;&#xA;&#xD;&#xA;Use it together with &quot;Log 1: Export Logs to DB&quot; which exports the log data used by this channel to SQLite.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/excel-import"
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_http
+      type="mapper"
+      guid="Log_2_Import_DB_Logs_to_Excel-FromHTTP-W5jzBcu5RgFLnf"
+      commit_id="fb1c26d0728c2517d5d2e254541482538fe1cd58"
+      commit_comment="Got rid of report we are not using it."
+      mapper_url_path="loginfo/"/>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>

@@ -1,11 +1,11 @@
--- http://help.interfaceware.com/v6/excel-adapter
 -- Basic boiler code for excel adapter server
+
+-- See the Iguana Excel category documentation:
+-- http://help.interfaceware.com/category/building-interfaces/repositories/builtin-iguana-excel
 
 local basicauth = require 'web.basicauth'
 
-local server = {}
-
-function server.serve(T)
+local function serve(T)
    local Data = T.data
    local Dispatcher = T.dispatcher
    
@@ -38,6 +38,41 @@ function server.serve(T)
    end
 end
 
--- TODO help information
+local Help = {
+   Title="server.serve",
+   Usage="server.serve{data=&lt;value&gt;, dispatcher=&lt;value&gt;}",
+   ParameterTable=true,
+   Parameters={
+      {data={Desc="HTTP GET/POST dependent on the specified dispatcher action <u>string</u>."}},
+      {dispatcher={Desc="Action table containing required setup action <u>table</u>."}},
+   },
 
-return server
+   Returns={},
+   Examples={[[-- Import data from an Excel table (when dispatcher specifies import)
+server.serve{data=Data, dispatcher=Dispatcher}]],
+[[-- Export data to an Excel table (when dispatcher specifies export)
+server.serve{data=Data, dispatcher=Dispatcher}]]},
+   Desc="Serve data to/from a table in an Excel spreadsheet, depending on the action specified in the dispatcher.",
+   SeeAlso={
+      {
+         Title="Export from Excel to Iguana",
+         Link="http://help.interfaceware.com/v6/excel-export"
+      },
+      {
+         Title="Source code for the excel.converter.lua module on github",
+         Link="https://github.com/interfaceware/iguana-excel/blob/master/shared/excel/converter.lua"
+      },
+      {
+         Title="Source code for the excel.server.lua module on github",
+         Link="https://github.com/interfaceware/iguana-excel/blob/master/shared/excel/server.lua"
+      },
+      {
+         Title="Source code for the excel.sheet.lua module on github",
+         Link="https://github.com/interfaceware/iguana-excel/blob/master/shared/excel/sheet.lua"
+      },
+   },
+}
+
+help.set{input_function=serve, help_data=Help}
+
+return serve
