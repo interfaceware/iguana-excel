@@ -30,7 +30,7 @@
         },
         {
             "Message": "GET /loginfo/feed?limit=4000 HTTP/1.1\r\nHost: localhost:6544\r\nAuthorization: Basic YWRtaW46cGFzc3dvcmQ=\r\nUser-Agent: curl/7.43.0\r\nAccept: */*\r\n\r\n",
-            "Name": ""
+            "Name": "Message 8"
         }
     ]
 }
