@@ -39,6 +39,11 @@ local function LatestVbaCode()
    return SpreadSheet.xl["vbaProject.bin"]
 end
 
+local function ChangeUser(X, User)
+   X.t[1] = User
+   return X
+end
+
 -- Excel spreadsheets in xlsm format are actually zip archive files which amongst other
 -- things contain a lot of XML documents. We leverage Iguana's ability to unzip
 -- a zip archive on the fly into a Lua table. That allows us to modify the spreadsheet
@@ -62,8 +67,8 @@ local function serve(T)
          AlterHost(SharedString, Host)
       end
       -- We change the spread sheet user name on the fly 
-      if SharedString:nodeText() == 'admin' then
-         SharedString.t[1] = User
+      if SharedString.t:nodeText() == 'admin' then
+         ChangeUser(SharedString, User)      
       end
    end
    SpreadSheet.xl["sharedStrings.xml"] = X:S()
